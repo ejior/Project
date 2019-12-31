@@ -54,6 +54,7 @@ var olId = document.getElementById('olId');
 olId.addEventListener('click', deleteItem);
 updataList(data);
 
+var items = [];
 function updataList(items){
 
     var olId = document.getElementById('olId');
