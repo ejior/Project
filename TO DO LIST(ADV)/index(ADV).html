@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style(ADV).css">
+    <title>Document</title>
+</head>
+<body> 
+    <section>
+        <h1><span class="userbox"></span><span>的代辦清單</span></h1>
+        <div class="dayBox">今天是<span class="year"></span>年<span class="month"></span>月<span class="days"></span>日(星期<span class="weekday"></span>)</div>
+        <div class="enterBox">
+            <input type="text" id='itembox' onchange="addItem()">
+            <input type='button' value='add' onclick="addItem()">
+        </div>
+        <hr>
+        <ol id='olId'>
+            <!-- <li>運動<span>delete</span></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li> -->
+        </ol>
+
+        <button id='clear' onclick='clearAll()'>全部清除</button>
+    
+    </section>
+    <script src="toDoList(ADV).js"></script>
+</body>
+</html>

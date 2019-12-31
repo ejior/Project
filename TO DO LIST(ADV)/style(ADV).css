@@ -1,0 +1,60 @@
+*{
+  font-family: monospace,Microsoft JhengHei;
+  background-color: lightblue;
+}
+
+section{
+  border: 1px solid #000;
+  width: 80%;
+  margin: 5% auto;
+}
+
+h1{
+  text-align: center;
+}
+
+
+.dayBox{
+    text-align: center;
+}
+
+.enterBox{
+  text-align: center;
+  margin: 20px;
+}
+
+input{
+    height: 25px;
+}
+
+hr{
+  width: 90%;
+  border: .5px solid gray;
+}
+
+ol{
+  /* border: 1px solid #000; */
+  width: 80%;
+  margin: 20px auto;
+}
+
+ol li{
+  border-bottom: 1px solid #000;
+  margin: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+li a{
+  font-size: 10px;
+/*   border: 1px solid #000; */
+  /* line-height: 26px; */
+  float: right;
+  color: blue;
+  cursor: pointer;
+}
+
+#clear{
+  margin: 20px;
+  margin-left: 45%;
+}

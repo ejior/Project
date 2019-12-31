@@ -1,0 +1,150 @@
+*{
+    font-family: serif,Microsoft JhengHei;
+}
+
+
+.col{
+    border: 1px solid blue;
+}
+.carousel-item img{
+    background-size: contain;
+    height: 300px;
+}
+.carousel-caption{
+    padding-bottom: 0;
+}
+.carousel-caption p{
+    color: #fff;
+    font-weight: normal;
+    margin-bottom: -1rem;
+    background-color: #000;
+    opacity: .5;
+    /* height: 30px; */
+    /* line-height: 30px; */
+    font-size: 14px;
+}
+
+.newbox hr{
+    margin: 2px;
+}
+
+.moreInfo a{
+    border: 2px solid darkred;
+    color: darkred;
+    float: right;
+    width: 90px;
+    line-height: 30px;
+    text-align: center;
+    text-decoration: none;
+    position: absolute;
+    bottom: 0;
+    right: 20px;
+}
+
+.moreInfo:hover{
+    cursor: pointer;
+}
+
+.nav-pills .nav-link.active{
+    background-color: yellowgreen;
+    font-weight: bold;
+}
+
+.nav-pills .nav-link.active{
+    background-color: yellowgreen;
+}
+
+.nav-pills a{
+    color: darkgray;
+}
+
+.img-thumbnail{
+    max-width: 20%;
+}
+
+.section2-1 img:hover{
+    border: 1px solid #000;
+    content: '球類運動專區';
+    color: white;
+}
+
+.section2-1 img{
+    position: relative;
+}
+
+.section2-1 a{
+    position: absolute;
+    top: 2px;
+    left: 50%;
+    color: white;
+    /* text-align: center; */
+    background-color: gray;
+}
+.showDiv{
+    position: relative;
+
+}
+
+.showDiv > img{
+    transition: all 0.3s ease
+}
+
+
+.showDiv h5{
+    /* overflow: hidden; */
+    position: absolute;
+    top: 9%;
+    left: 21%;
+    width: 56%;
+    opacity: 0;
+    transition: all 0.3s ease;
+    z-index: 2;
+    color: #fff;
+    /* border: 1px solid green; */
+    height: 20%;
+    text-align: center;
+    background: rgba(1,1,0.5,0.5);
+   height: 80px;
+   line-height: 80px;
+   padding-top: 0;
+}
+
+.showDiv:hover h5{
+    opacity: 1;
+}
+
+/* RWD */
+
+@media( max-width:768px){
+    .carousel-item img{
+    /* background-size: contain; */
+    height: auto;
+
+}
+
+@media( max-width:577px){
+    .timeline:after,
+    .point:after{
+        display: none;
+    }
+
+    .navtop{
+        display: none;
+    }
+    .slidepage{
+        width: 100%;
+    }
+
+}
+}
+
+
+
+.list-group-horizontal{
+    line-height: 7px;
+}
+
+.list-group li a{
+    color: gray;
+    text-decoration: none;
+}
