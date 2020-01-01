@@ -48,38 +48,59 @@ weekday[0].innerHTML = getweekdayarr[getweekday];
 // console.log(weekday);
 
 // ***點擊新增代辦事項
-
-
-// console.log(data);
+var data = JSON.parse(localStorage.getItem('item')) || [];
+// console.log(data.item);
 var olId = document.getElementById('olId');
-var dbtn = document.getElementsByClassName('deletebtn');
-function addItem(){
+olId.addEventListener('click', deleteItem);
+updataList(data);
 
-    var itemboxV = document.getElementById('itembox').value;
-    var itembox = document.getElementById('itembox');
-    // console.log(itemboxV);
-    
-    if(itemboxV.length > 0){
-        itembox.value = '';
-    }else{return} //無輸入文字，無新增
+var items = [];
+function updataList(items){
 
-    var li_div = document.createElement('li');
-    var span_div = document.createElement('span');
-    span_div.className = 'deletebtn'
-    li_div.textContent = itemboxV;
-    olId.appendChild(li_div);
-    li_div.appendChild(span_div);
-    span_div.textContent = 'delete';
-
-    span_div.onclick = function () {
-        olId.removeChild(li_div);
-    }
-    
-
+    var olId = document.getElementById('olId');
+    var itemList = '';
+    var len = items.list.length;
+    // console.log(len);
+     for(i=0;i<len;i++){
+        //  console.log(items.list[i]);
+         itemList += '<li  class="delbtn" data-index="' + i +'">'+ items.list[i] +  '</li>';
+     }
+    //  console.log(itemList);
+    olId.innerHTML = itemList;
 }
 
-// ****清除所有代辦事項
+function addItem(){
+    var itembox_value = document.getElementById('itembox').value;
+    var itembox = document.getElementById('itembox');
+    // console.log(itembox_value);
+    // console.log(data);
+    if (itembox_value.length > 0){
+        itembox.value = '';
+        data.list.push(itembox_value);
+    }else{return} //無輸入文字，無新增
+
+    localStorage.setItem('item',JSON.stringify(data));
+    updataList(data);
+}
+
+function deleteItem(e){
+    e.preventDefault();
+    var index = e.target.dataset.index;
+    data.list.splice(index,1);
+    localStorage.setItem('item', JSON.stringify(data));
+    updataList(data);
+}
+
 function clearAll(){
-    olId.innerHTML = '';
+    var li = document.getElementsByTagName('li').length;
+    if(li<1){return}
+
+    var clear = confirm('確定全部清除?');
+    if(clear == true){
+        console.log(data.list);
+        data.list.splice(0,data.list.length);
+        localStorage.setItem('item', JSON.stringify(data));
+    }else{return}
+    updataList(data);
     itembox.value = ''
 }
